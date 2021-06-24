@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="dogForYou.RandomBreedPage"
+    Title="Random Breed">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Margin="10,10,10,10" HorizontalOptions="Center" VerticalOptions="Center">
+            <Button Text="NEXT" FontSize="Medium" FontAttributes="Bold" BackgroundColor="GreenYellow" Clicked="refreshPage" />
+            <Label FontAttributes="Bold" FontSize="Title" TextColor="Blue" x:Name="Breed_name" HorizontalOptions="Center" />
+            <Image x:Name="Breed_url" WidthRequest="350" HeightRequest="350"/>
+            <Label FontSize="Medium" TextColor="Black" x:Name="temperament" HorizontalTextAlignment="Center" />
+            <Button x:Name="like_btn" Text="LIKE" FontSize="Medium" FontAttributes="Bold" BackgroundColor="HotPink" Clicked="addToFavorite" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

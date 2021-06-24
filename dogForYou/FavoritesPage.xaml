@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="dogForYou.FavoritesPage"
+    Title="Favorite Breeds">
+    <ContentPage.Content>
+        <StackLayout>
+        <ListView x:Name="favoritesListView" HasUnevenRows="True" BackgroundColor="GreenYellow">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                   <ViewCell>
+                        <StackLayout Orientation="Horizontal" Margin="10,10,10,10">
+                            <Image Source="{ Binding Image}" WidthRequest="200" HeightRequest="100"/>
+                            <StackLayout Orientation="Vertical">
+                                <Label FontAttributes="Bold" FontSize="Body" TextColor="Blue" Text="{ Binding Name}" />
+                                <Label FontSize="Body" TextColor="Black" Text="{Binding Temperament}" />
+                            </StackLayout>   
+                        </StackLayout>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Remove from the list"
+                                      IsDestructive="True"
+                                      CommandParameter="{Binding .}"
+                                      Clicked="deleteFromDB" />
+                        </ViewCell.ContextActions>
+                    </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        </ListView>
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

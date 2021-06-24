@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="dogForYou.FilterPage"
+    Title="All Dog Breeds">
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar TextChanged="SearchByBreedName" Placeholder="Search by Breed Name"/>
+    <ListView x:Name="dogBreedsList" HasUnevenRows="True" BackgroundColor="GreenYellow">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                   <ViewCell>
+                        <StackLayout Orientation="Vertical" Margin="10,10,10,10">
+                            <Label FontAttributes="Bold" FontSize="Title" TextColor="Blue" Text="{ Binding name}" HorizontalOptions="Center" />
+                            <Image Source="{ Binding Image.url}" WidthRequest="200" HeightRequest="100"/>
+                           
+                            <StackLayout Orientation="Horizontal">
+                                <Label FontAttributes="Bold" TextColor="Black" FontSize="Body" Text="Breed Group:" />
+                                <Label FontSize="Body" TextColor="Black" Text="{Binding breed_group}" />
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal">
+                                <Label FontAttributes="Bold" TextColor="Black" FontSize="Body" Text="Weight (lbs):" />
+                                <Label FontSize="Body" TextColor="Black" Text="{Binding Weight.imperial}" />
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal">
+                                <Label FontAttributes="Bold" TextColor="Black" FontSize="Body" Text="Height (Inches):" />
+                                <Label FontSize="Body" TextColor="Black" Text="{Binding Height.imperial}" />
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal">
+                                <Label FontAttributes="Bold" TextColor="Black" FontSize="Body" Text="Life Span:" />
+                                <Label FontSize="Body" TextColor="Black" Text="{Binding life_span}" />
+                             </StackLayout>
+
+                             <Label FontAttributes="Bold" TextColor="Black" FontSize="Body" Text="Temperament:" />
+                             <Label FontSize="Body" TextColor="Black" Text="{Binding temperament}" />
+                           
+                        </StackLayout>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Like" IsDestructive="True"
+                               CommandParameter="{Binding .}"
+                               Clicked="Like_Clicked" />
+                        </ViewCell.ContextActions>
+                    </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

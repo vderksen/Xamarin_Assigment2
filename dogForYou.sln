@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.809.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dogForYou.Android", "dogForYou.Android\dogForYou.Android.csproj", "{E3924AA7-ECD2-42B3-B6E5-CC9A549A8A55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dogForYou", "dogForYou\dogForYou.csproj", "{F57BDAFB-73DB-4E38-BDC3-1FF60819432E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E3924AA7-ECD2-42B3-B6E5-CC9A549A8A55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3924AA7-ECD2-42B3-B6E5-CC9A549A8A55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3924AA7-ECD2-42B3-B6E5-CC9A549A8A55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3924AA7-ECD2-42B3-B6E5-CC9A549A8A55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F57BDAFB-73DB-4E38-BDC3-1FF60819432E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F57BDAFB-73DB-4E38-BDC3-1FF60819432E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F57BDAFB-73DB-4E38-BDC3-1FF60819432E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F57BDAFB-73DB-4E38-BDC3-1FF60819432E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF02E29A-CFD3-43F2-BF99-E8561F0059D6}
+	EndGlobalSection
+EndGlobal
